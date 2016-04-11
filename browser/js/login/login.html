@@ -1,9 +1,9 @@
 <form id="login-form" name="loginForm" ng-submit="loginForm.$valid && sendLogin(login)">
-
     <alert type="danger" ng-show="error">
         {{ error }}
     </alert>
-
+    <button class="btn btn-default"><img src="http://images.dailytech.com/nimage/G_is_For_Google_New_Logo_Thumb.png" alt=""><a target="_self" href="/auth/google">Sign in with Google</a></button>
+    <p>All of your entries and information will remain private</p>
     <div class="form-group">
         <label for="email">Email address</label>
         <input type="text" ng-model="login.email" class="form-control" id="email" placeholder="Enter email">

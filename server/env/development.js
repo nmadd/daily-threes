@@ -1,5 +1,5 @@
 module.exports = {
-  "DATABASE_URI": "mongodb://localhost:27017/fsg-app",
+  "DATABASE_URI": "mongodb://localhost:27017/daily-threes",
   "SESSION_SECRET": "Optimus Prime is my real dad",
   "TWITTER": {
     "consumerKey": "INSERT_TWITTER_CONSUMER_KEY_HERE",
@@ -12,8 +12,8 @@ module.exports = {
     "callbackURL": "INSERT_FACEBOOK_CALLBACK_HERE"
   },
   "GOOGLE": {
-    "clientID": "INSERT_GOOGLE_CLIENTID_HERE",
-    "clientSecret": "INSERT_GOOGLE_CLIENT_SECRET_HERE",
-    "callbackURL": "INSERT_GOOGLE_CALLBACK_HERE"
+    "clientID": "336499327678-g8i74cvfua2hgs2q9b20cg0hh9e5onuu.apps.googleusercontent.com",
+    "clientSecret": "n7x9l8ki4jYR8e8tEpXU3U4p",
+    "callbackURL": "http://localhost:1337/auth/google/callback"
   }
 };
