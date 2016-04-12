@@ -1,0 +1,13 @@
+<div id="entries-container" class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-left" ng-repeat="entry in entries">
+            <h4>{{entry.date | date:'LLLL d, yyyy'}}</h4>
+            <div ng-repeat="field in entry.fields track by $index">
+                <h3>{{field.prompt}}</h3>
+                <p class="text-left" ng-repeat="answer in field.answer">
+                    {{$index + 1}}. {{answer}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
