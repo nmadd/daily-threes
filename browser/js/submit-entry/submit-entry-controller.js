@@ -1,31 +1,27 @@
-app.controller("SubmitEntryController", function($scope, $http, SubmitEntryFactory, theEntryFields, AuthService) {
+app.controller("SubmitEntryController", function($scope, $http, SubmitEntryFactory, AuthService) {
 
     $scope.entryFormData = {};
 
-    $scope.entryFormModel = {};
+    $scope.fields = [{prompt: "Dummy Question Data"}, {prompt: "Another hard coded test question"}];
 
-
-    $scope.fields = theEntryFields;
-
-    $scope.hideField = SubmitEntryFactory.hideField;
 
     $scope.createArray = function(num) {
         return new Array(num);
     };
 
-    $scope.addField = function() {
-        var newField = {
-            prompt: $scope.prompt,
-            date: new Date(),
-            answer_lines: $scope.number_answers,
-            answer_type: $scope.answer_type
-        };
-        $http({
-            method: "POST",
-            url: "/api/fields/",
-            data: newField
-        })
-    };
+    // $scope.addField = function() {
+    //     var newField = {
+    //         prompt: $scope.prompt,
+    //         date: new Date(),
+    //         answer_lines: $scope.number_answers,
+    //         answer_type: $scope.answer_type
+    //     };
+    //     $http({
+    //         method: "POST",
+    //         url: "/api/fields/",
+    //         data: newField
+    //     })
+    // };
 
     $scope.addEntry = function(entryFormData) {
     	var entryKeys = Object.keys(entryFormData);
